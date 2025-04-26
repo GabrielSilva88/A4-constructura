@@ -1,1 +1,59 @@
-<p>cadastro works!</p>
+<div class="container">
+    <!-- menu -->
+    <app-menu></app-menu>
+  
+    <div class="logout">
+      <button mat-fab color="primary">
+        <mat-icon aria-hidden="false">logout</mat-icon>
+      </button>
+    </div>
+  
+    <h1>CADASTRO DE USUÁRIO</h1>
+  
+    <form [formGroup]="formulario" novalidate>
+      <mat-grid-list cols="4" rowHeight="2:1">
+        <mat-grid-tile class="coluna" colspan="2">
+          <mat-form-field appearance="fill">
+            <mat-label>E-mail</mat-label>
+            <input matInput formControlName="email">
+            <mat-error *ngIf="formulario.get('email')?.invalid">
+              Informe um e-mail válido
+            </mat-error>
+          </mat-form-field>
+        </mat-grid-tile>
+        <!-- linha 1 -->
+        <mat-grid-tile class="coluna" colspan="2">
+          <mat-form-field appearance="fill">
+            <mat-label>Senha</mat-label>
+            <input matInput formControlName="senha" type="password">
+            <mat-error *ngIf="formulario.get('senha')?.invalid">
+              A senha precisa ter no mínimo 5 caracteres
+            </mat-error>
+          </mat-form-field>
+        </mat-grid-tile>
+        <!-- linha 2 -->
+        <mat-grid-tile class="coluna" colspan="2">
+          <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Nome</mat-label>
+            <input matInput formControlName="nome">
+            <mat-error *ngIf="formulario.get('nome')?.invalid">
+              O nome é obrigatório
+            </mat-error>
+          </mat-form-field>
+        </mat-grid-tile>
+        <!-- linha 3 -->
+        <mat-grid-tile class="coluna" colspan="2">
+          <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Telefone</mat-label>
+            <input matInput formControlName="telefone">
+          </mat-form-field>
+        </mat-grid-tile>
+        <!-- linha 4 -->
+        <mat-grid-tile class="coluna direito">
+          <button mat-raised-button>Limpar</button>
+          <button mat-raised-button color="primary" [disabled]="formulario.invalid">Editar / Salvar</button>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </form>
+  </div>
+  
