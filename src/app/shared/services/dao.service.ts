@@ -8,7 +8,6 @@ import { AppState } from '../../app.state';
 })
 export class DaoService {
 
-  
   public static readonly MEDIA_TYPE_APP_JSON = 'application/json';
 
   constructor(
