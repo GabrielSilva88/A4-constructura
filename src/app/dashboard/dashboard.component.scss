@@ -1,0 +1,74 @@
+
+.mat-form-field {
+    width: 90%;
+  }
+  
+  .mat-button-base {
+    margin: 8px 8px 8px 0;
+  }
+  
+  .container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 70%;
+    border: 1px solid gray;
+    border-radius: 20px;
+    background-color: #f5f5f5;
+    height: 650px;
+  }
+  
+  .desc {
+    width: 95%;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  .mat-column-data {
+    width: 150px;
+    text-align: center;
+  }
+  
+  .mat-column-valor {
+    width: 150px;
+    text-align: right;
+  }
+  
+  .mat-column-tipo {
+    padding-left: 16px;
+    width: 200px;
+    text-align: left;
+  }
+  
+  .mat-column-fixo {
+    width: 50px;
+    text-align: center;
+  }
+  
+  .mat-column-descricao {
+    text-align: left;
+  }
+  
+  .mat-column-acoes {
+    width: 200px;
+    text-align: center;
+  }
+  
+  .mat-cell.no-data {
+    text-align: left;
+  }
+  
+  h1 {
+    padding-top: 10px;
+  }
+  
+  h3 {
+    text-align: center;
+    padding: 10px 10px 5px 10px;
+  }
+  
