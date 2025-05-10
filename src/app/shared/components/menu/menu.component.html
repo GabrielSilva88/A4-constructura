@@ -1,0 +1,45 @@
+<div class="menu">
+    <button mat-fab color="warn" [matMenuTriggerFor]="menu">
+      <mat-icon fontIcon="more_vert" matTooltip="Menu do Sistema"></mat-icon>
+    </button>
+  
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item [disabled]="estouDashboard" (click)="onNavigate('dashboard')">
+        <mat-icon fontIcon="home"></mat-icon>
+        <span>Dashboard</span>
+      </button>
+      <button mat-menu-item [matMenuTriggerFor]="relatorios">
+        <mat-icon fontIcon="request_page"></mat-icon>
+        <span>Relatórios</span>
+      </button>
+      <button mat-menu-item [matMenuTriggerFor]="lancamentos">
+        <mat-icon fontIcon="payments"></mat-icon>
+        <span>Lançamentos</span>
+      </button>
+    </mat-menu>
+  
+    <mat-menu #relatorios="matMenu">
+      <button mat-menu-item (click)="onNavigate('relatorio-receita')" [disabled]="estouRelatorioReceita">
+        <mat-icon fontIcon="currency_exchange"></mat-icon>
+        <span>Relatório de Receitas</span>
+      </button>
+      <button mat-menu-item (click)="onNavigate('relatorio-despesa')" [disabled]="estouRelatorioDespesa">
+        <mat-icon fontIcon="shopping_cart"></mat-icon>
+        <span>Relatório de Despesas</span>
+      </button>
+    </mat-menu>
+  
+    <mat-menu #lancamentos="matMenu">
+      <button mat-menu-item (click)="onNavigate('lancamentos/receita')" [disabled]="estouLancamentoReceita">
+        <mat-icon fontIcon="paid"></mat-icon>
+        <span>Lançamento de Receitas</span>
+      </button>
+      <button mat-menu-item (click)="onNavigate('lancamentos/despesa')" [disabled]="estouLancamentoDespesa">
+        <mat-icon fontIcon="shopping_bag"></mat-icon>
+        <span>Lançamento de Despesas</span>
+      </button>
+    </mat-menu>
+  
+  </div>
+  
+  
