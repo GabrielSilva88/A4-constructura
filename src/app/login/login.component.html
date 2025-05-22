@@ -1,0 +1,43 @@
+<div class="container-bg">
+    <mat-grid-list cols="4" rowHeight="320px">
+      <mat-grid-tile colspan="4" rowspan="1"></mat-grid-tile>
+      <mat-grid-tile colspan="1" ></mat-grid-tile>
+      <mat-grid-tile colspan="2">
+        <div class="container">
+          <!-- formulario -->
+          <form [formGroup]="formulario" novalidate>
+            <div class="imagem child">
+              <mat-icon aria-hidden="false">lock_person</mat-icon>
+            </div>
+            <div class="child">
+              <mat-form-field class="full-width" appearance="fill">
+                <mat-label>E-mail</mat-label>
+                <input matInput formControlName="email" placeholder="meuemail@email.com">
+              </mat-form-field>
+            </div>  
+            <div class="child">
+              <mat-form-field class="full-width" appearance="fill">
+                <mat-label>Senha</mat-label>
+                <input matInput formControlName="senha" type="password" title="senha">
+              </mat-form-field>
+            </div>
+            <div class="child">
+              <button mat-raised-button color="primary"
+              [disabled]="formulario.invalid"
+              (click)="onLogon()">Entrar</button>
+            </div>
+            <div class="child">
+              
+                <button mat-raised-button class="button">cadastre-se</button>
+              
+                <button mat-raised-button class="button">recuperar senha</button>
+            </div>
+          </form>
+          <!-- formulario -->
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="1" ></mat-grid-tile>
+      <mat-grid-tile colspan="4" rowspan="1" ></mat-grid-tile>
+    </mat-grid-list>
+  </div>
+    

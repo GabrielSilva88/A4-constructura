@@ -1,0 +1,66 @@
+
+<div class="container">
+  <!-- menu -->
+  <app-menu></app-menu>
+
+  <!-- logout -->
+  <app-logout></app-logout>
+  
+<!-- <div class="logout">
+    <button mat-fab color="primary">
+      <mat-icon aria-hidden="false">logout</mat-icon>
+    </button>
+  </div> 
+-->
+
+  <h1>CADASTRO DE DESPSAS</h1>
+
+  <form [formGroup]="formulario" novalidate>
+    <mat-grid-list cols="3" rowHeight="3:1">
+      <mat-grid-tile class="coluna">
+        <mat-form-field appearance="fill">
+          <mat-label>Tipo</mat-label>
+          <mat-select formControlName="tipo">
+              <mat-option *ngFor="let tipo of tipos; index as i" [value]="tipo">
+              {{tipo}}
+              </mat-option>
+
+          </mat-select>
+        </mat-form-field>
+      </mat-grid-tile>
+
+      <mat-grid-tile class="coluna">
+        <mat-slide-toggle color="primary" formControlName="ehFixo">Despesa fixa?</mat-slide-toggle>
+      </mat-grid-tile>
+
+      <mat-grid-tile class="coluna">
+        <mat-form-field appearance="fill">
+          <mat-label>Data da Despesa</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="data">
+          <mat-hint>DD/MM/AAAA</mat-hint>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </mat-grid-tile>
+      <!-- linha 2 -->
+      <mat-grid-tile class="coluna" colspan="2">
+        <mat-form-field class="full-width desc" appearance="fill">
+          <mat-label>Descrição</mat-label>
+          <input matInput formControlName="descricao">
+        </mat-form-field>
+      </mat-grid-tile>
+
+      <mat-grid-tile class="coluna">
+        <mat-form-field class="full-width" appearance="fill">
+          <mat-label>Valor</mat-label>
+          <input matInput formControlName="valor">
+        </mat-form-field>
+      </mat-grid-tile>
+      <!-- linha 3 -->
+      <mat-grid-tile class="coluna botoes" colspan="3">
+          <button mat-raised-button (click)="onLimpar()">Limpar</button>
+          <button mat-raised-button color="primary" [disabled]="formulario.invalid" (click)="onSalvar()">{{buttonLabel}}</button>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </form>
+</div>
