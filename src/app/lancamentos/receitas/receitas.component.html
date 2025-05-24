@@ -5,13 +5,6 @@
     <!-- logout -->
     <app-logout></app-logout>
     
-  <div class="logout">
-      <button mat-fab color="primary">
-        <mat-icon aria-hidden="false">logout</mat-icon>
-      </button>
-    </div> 
-
-    
     <h1>CADASTRO DE RECEITAS</h1>
   
     <form [formGroup]="formulario" novalidate>
@@ -46,14 +39,14 @@
         <mat-grid-tile class="coluna" colspan="2">
           <mat-form-field class="full-width desc" appearance="fill">
             <mat-label>Descrição</mat-label>
-            <input matInput formControlName="descricao">
+            <input matInput formControlName="descricao" maiusculo>
           </mat-form-field>
         </mat-grid-tile>
   
         <mat-grid-tile class="coluna">
           <mat-form-field class="full-width" appearance="fill">
             <mat-label>Valor</mat-label>
-            <input matInput formControlName="valor">
+            <input matInput formControlName="valor" dinheiro>
           </mat-form-field>
         </mat-grid-tile>
         <!-- linha 3 -->

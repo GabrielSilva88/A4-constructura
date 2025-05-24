@@ -27,6 +27,8 @@ import { ActivatedRoute } from '@angular/router';
     LogoutComponent,
     MaterialModule,
     ReactiveFormsModule,
+    DinheiroDirective,
+    MaiusculoDirective,
     CommonModule,
     SharedModule
   ],
@@ -111,7 +113,7 @@ export class ReceitasComponent {
   }
 
   private salvar(receita: IReceita): void {
-    this.lancamentosService.criarLancamento(new Lancamento(receita, false)).subscribe({
+    this.lancamentosService.criarLancamento(new Lancamento(receita, true)).subscribe({
       next: (response) => {
         const lancamentoGravado = response.body;
         Swal.fire({

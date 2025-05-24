@@ -27,7 +27,9 @@ import { padLeft } from '../../shared/functions/pad-left.function';
     MaterialModule,
     ReactiveFormsModule,
     CommonModule,
-    SharedModule
+    SharedModule,
+    MaiusculoDirective,
+    DinheiroDirective
   ],
   templateUrl: './despesas.component.html',
   styleUrl: './despesas.component.scss'
@@ -36,8 +38,7 @@ export class DespesasComponent implements OnDestroy{
   private idEdicao=0;
 
   private dataSubscription: Subscription | undefined;
-  // dataSource: any[] = [];
-  // displayedColumns = ['data','valor','tipo','fixo','descricao','acoes'];
+
   formulario!: FormGroup;
   
   constructor(

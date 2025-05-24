@@ -19,11 +19,11 @@
     </mat-menu>
   
     <mat-menu #relatorios="matMenu">
-      <button mat-menu-item (click)="onNavigate('relatorio-receita')" [disabled]="estouRelatorioReceita">
+      <button mat-menu-item (click)="onNavigate('relatorios/receitas')" [disabled]="estouRelatorioReceita">
         <mat-icon fontIcon="currency_exchange"></mat-icon>
         <span>Relatório de Receitas</span>
       </button>
-      <button mat-menu-item (click)="onNavigate('relatorio-despesa')" [disabled]="estouRelatorioDespesa">
+      <button mat-menu-item (click)="onNavigate('relatorios/despesas')" [disabled]="estouRelatorioDespesa">
         <mat-icon fontIcon="shopping_cart"></mat-icon>
         <span>Relatório de Despesas</span>
       </button>

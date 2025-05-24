@@ -42,7 +42,7 @@ export class LancamentosService {
     if (!lancamentoString) {
       return null as unknown as Lancamento;
     }
-    const recuperado = JSON.stringify(lancamentoString);
+    const recuperado = JSON.parse(lancamentoString);
     return recuperado as unknown as Lancamento; // error ao inserir sem 'as unknown'
   }
 

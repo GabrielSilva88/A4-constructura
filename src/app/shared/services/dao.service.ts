@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AppState } from '../../app.state';
+import { StateService } from './state.service';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class DaoService {
 
   constructor(
     private httpClient: HttpClient,
-    private state: AppState,
+    private state: StateService,
   ) { }
 
   post<T>(url: string, body: any, mediaType: string): Observable<HttpResponse<T>> {
